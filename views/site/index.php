@@ -75,6 +75,9 @@ $this->title = 'E-Shopper';
             <div class="col-sm-3">
                 <div class="left-sidebar">
                     <h2>Category</h2>
+
+                    <?= \app\components\MenuWidget::widget(['template' => 'select']); ?>
+
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                         <div class="panel panel-default">
                             <div class="panel-heading">
