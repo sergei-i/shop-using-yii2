@@ -2,9 +2,6 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-
-$this->title = 'E-Shopper';
 ?>
 
 <section id="slider"><!--slider-->
