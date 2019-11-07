@@ -53,10 +53,7 @@ $config = [
                 'category/<id:\d+>/page/<page:\d+>' => 'category/view',
                 'category/<id:\d+>' => 'category/view',
                 'product/<id:\d+>' => 'product/view',
-<<<<<<< HEAD
                 'search' => 'category/search',
-=======
->>>>>>> 47a0a233c25949066831f6b4a3b864068459e775
             ],
         ],
 
