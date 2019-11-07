@@ -3,24 +3,27 @@
         <table class="table table-hover table-striped">
             <thead>
             <tr>
-                <td>Фото</td>
-                <td>Наименование</td>
-                <td>Количество</td>
-                <td>Цена</td>
-                <td>
+                <th>Фото</th>
+                <th>Наименование</th>
+                <th>Количество</th>
+                <th>Цена</th>
+                <th>
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </td>
+                </th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($session['cart'] as $id => $item): ?>
                 <tr>
-                    <td><?= $item['img']; ?></td>
+                    <td><?= \yii\helpers\Html::img("@web/images/products/{$item['img']}",
+                            ['alt' => $item['img'], 'height' => 50]); ?></td>
                     <td><?= $item['name']; ?></td>
                     <td><?= $item['qty']; ?></td>
                     <td><?= $item['price']; ?></td>
                     <td>
-                        <span class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span>
+                        <span data-id="<?= $id; ?>" class="glyphicon glyphicon-remove text-danger del-item"
+                              aria-hidden="true">
+                        </span>
                     </td>
                 </tr>
             <?php endforeach; ?>
