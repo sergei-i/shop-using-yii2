@@ -1,5 +1,7 @@
 <div class="admin-default-index container">
     <h1><?= $this->context->action->uniqueId ?></h1>
+
+    <?= debug(Yii::$app->user->identity); ?>
     <p>
         This is the view content for action "<?= $this->context->action->id ?>".
         The action belongs to the controller "<?= get_class($this->context) ?>"

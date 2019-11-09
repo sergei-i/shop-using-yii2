@@ -7,11 +7,6 @@ use Yii;
 
 class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
 
     public static function tableName()
     {
@@ -77,16 +72,11 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function validatePassword($password)
     {
-        if (Yii::$app->getSecurity()->validatePassword($password, $this->password)) {
-            echo 'true';
-
-        } else {
-            debug($this->password);
-        }
+        return Yii::$app->getSecurity()->validatePassword($password, $this->password);
     }
 
-    /*public function generateAuthKey()
+    public function generateAuthKey()
     {
         $this->auth_key = Yii::$app->security->generateRandomString();
-    }*/
+    }
 }
