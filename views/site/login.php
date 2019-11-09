@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="site-login container">
-    <?= Yii::$app->getSecurity()->generatePasswordHash('1'); ?>
+    <?/*= Yii::$app->getSecurity()->generatePasswordHash('1'); */?>
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?php $form = ActiveForm::begin([
