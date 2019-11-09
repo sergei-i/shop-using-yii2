@@ -98,6 +98,7 @@ use yii\helpers\Url;
                             </ul>
                         </div>
                     </div><!--/brands_products-->
+                    </div><!--/brands_products-->
 
                     <div class="price-range"><!--price-range-->
                         <h2>Price Range</h2>
@@ -114,8 +115,6 @@ use yii\helpers\Url;
 
                 </div>
             </div>
-
-            <?php debug(Yii::$app->user->identity); ?>
 
             <div class="col-sm-9 padding-right">
                 <?php if (!empty($hits)): ?>

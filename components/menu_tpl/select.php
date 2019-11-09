@@ -1,13 +1,12 @@
-<li>
-    <a href="">
-        <?= $category['name']; ?>
-        <?php if (isset($category['children'])): ?>
-            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-        <?php endif; ?>
-    </a>
-    <?php if (isset($category['children'])): ?>
-        <ul>
-            <?= $this->getMenuHtml($category['children']); ?>
-        </ul>
-    <?php endif; ?>
-</li>
+<option value="<?= $category['id']; ?>"
+    <?php if ($category['id'] == $this->model->parent_id) echo 'selected' ?>
+    <?php if ($category['id'] == $this->model->id) echo 'disabled' ?>
+>
+    <?= $tab . $category['name']; ?>
+</option>
+
+<?php if (isset($category['children'])): ?>
+    <ul>
+        <?= $this->getMenuHtml($category['children'], $tab . '--'); ?>
+    </ul>
+<?php endif; ?>
