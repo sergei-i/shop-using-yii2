@@ -118,8 +118,10 @@ use yii\helpers\Url;
                                     <?= $product->category->name; ?>
                                 </a>
                             </p>
-                            <a href=""><img src="/images/product-details/share.png" class="share img-responsive"
-                                            alt=""/></a>
+                            <a href="">
+                                <img src="/images/product-details/share.png" class="share img-responsive" alt=""/>
+                            </a>
+                            <?= $product->content; ?>
                         </div><!--/product-information-->
                     </div>
                 </div><!--/product-details-->
