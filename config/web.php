@@ -15,6 +15,14 @@ $config = [
             'layout' => 'admin',
             'defaultRoute' => 'order/index',
         ],
+        'yii2images' => [
+            'class' => 'rico\yii2images\Module',
+            'imagesStorePath' => 'upload/store',
+            'imagesCachePath' => 'upload/cache',
+            'graphicsLibrary' => 'GD',
+            'placeHolderPath' => '@webroot/upload/store/no-image.png',
+            'imageCompressionQuality' => 100,
+        ],
     ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
